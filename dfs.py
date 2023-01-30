@@ -10,22 +10,8 @@ maximum_depth = 0
 count = 0
 
 board = [[1 for j in range(7)] for i in range(7)]
-board[0][0] = -1
-board[0][1] = -1
-board[1][0] = -1
-board[1][1] = -1
-board[5][0] = -1
-board[5][1] = -1
-board[6][0] = -1
-board[6][1] = -1
-board[0][5] = -1
-board[0][6] = -1
-board[1][5] = -1
-board[1][6] = -1
-board[5][5] = -1
-board[5][6] = -1
-board[6][5] = -1
-board[6][6] = -1
+for j, i in [(j, i) for j in [i for i in range(7) if i%5 in [0, 1]] for i in range(7) if i%5 in [0, 1]]:
+    board[j][i] = -1
 board[3][3] = 0
 
 
